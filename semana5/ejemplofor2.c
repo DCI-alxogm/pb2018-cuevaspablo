@@ -3,8 +3,12 @@
 #include<math.h>
 int main()
 {
-float e;
-int n=10,j;
+float e,p;
+int n,j;
+printf("Defina el número de pasos\n");
+scanf("%i",&n);
+printf("Defina otra variable\n");
+scanf("%i",&p);
 for (j=0;j<n;j++) 
 {
 e=exp(j);
