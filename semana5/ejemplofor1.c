@@ -4,7 +4,7 @@ int main ()
 {
 float tempC,tempK;
 float TempC=100, final=200, delta;
-int n,i,z=1;
+int n,i,z=1,l;
 while (z==1){
 delta=(final-TempC)/n;
 printf("Defina el número de pasos\n");
