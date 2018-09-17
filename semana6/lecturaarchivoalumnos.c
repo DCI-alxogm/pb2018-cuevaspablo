@@ -130,7 +130,7 @@ else if (semestre[2]==9){
 fprintf(archivo,"El alumno 3 va en noveno\n",semestre[2]);
 }
 if (semestre[3]==1){
-printf(archivo,"El alumno 4 va en primero\n",semestre[3]);
+fprintf(archivo,"El alumno 4 va en primero\n",semestre[3]);
 }
 else if (semestre[3]==2){
 fprintf(archivo,"El alumno 4 va en segundo\n",semestre[3]);

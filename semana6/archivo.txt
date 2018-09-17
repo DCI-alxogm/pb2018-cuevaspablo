@@ -1,0 +1,25 @@
+Este es el archivo de el programa alumnosA continuación, proporcionará información de diez alumnos
+Escriba el promedio de cada alumno, luego escriba el semestre del primer alumno
+Escriba el semestre del alumno 2 al alumno diez, y en el décimo primer caracter, escriba 0
+Escriba escriba 1 para asginar masculino, 2 para femenino, y en el décimo primer caracter, escriba 0
+El promedio del alumno 1 es: 0.000000 
+El promedio del alumno 2 es: 0.000000 
+El promedio del alumno 3 es: 0.000000 
+El promedio del alumno 4 es: -9918417744136924351119383048069578752.000000 
+El promedio del alumno 5 es: 0.000000 
+El promedio del alumno 6 es: -0.000000 
+El promedio del alumno 7 es: 0.000000 
+El promedio del alumno 8 es: -0.000000 
+El promedio del alumno 9 es: 0.000000 
+El promedio del alumno 10 es: -0.000000 
+EL promedio global es: -991841758568059932259070786098167808.000000
+El alumno 1 va en primero
+El alumno 2 va  en segundo
+El alumno 3 va en tercero
+El alumno 4 va en cuarto
+El alumno 5 va en quinto
+El alumno 6 va en sexto
+El alumno 7 va en séptimo
+El alumno 8 va en octavo
+El alumno 9 va en noveno
+El sexo del alumno 1 es masculino

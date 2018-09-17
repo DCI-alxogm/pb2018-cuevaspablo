@@ -31,7 +31,7 @@ switch(p)
 {
 case 1:
 for (x=0;x<n;x++) {
-a=exp(x);
+fprintf("a=exp(x)\n");
 fprintf(archivo,"%i\t",x);
 fprintf(archivo,"%f\n",a);
 }
@@ -39,7 +39,7 @@ break;
 case 2: 
 for (j=0;j<n;j++) 
 {
-e=sin(j*(pi/180));
+fprintf("e=sin(j*(pi/180))\n");
 fprintf(archivo,"%i\t",j);
 fprintf(archivo,"%f\n",e);
 }
@@ -47,21 +47,21 @@ break;
 case 3:
 for (j=0;j<n;j++) 
 {
-e=cos(j*(pi/180));
+fprintf("e=cos(j*(pi/180))\n");
 fprintf(archivo,"%i\t",j);
 fprintf(archivo,"%f\n",e);
 }
 break;
 case 4: 
 for (f=0;f<n;f++) {
-d=log(f);
+fprintf("d=log(f)\n");
 fprintf(archivo,"%i\t",f);
 fprintf(archivo,"%f\n",d);
 }
 break;
 case 5: 
 for (t=0;t<n;t++) {
-f=sqrt(t);
+fprintf("f=sqrt(t)\n");
 fprintf(archivo,"%i\t",t);
 fprintf(archivo,"%f\n",f);
 }
