@@ -8,7 +8,7 @@ float a,d,e,f,x,y,z,pi=3.14159265359,r,s,t;
 char var[255];
 int n,k=1,l,p,j,w;
 archivo=fopen("funciones.txt","w");
-fputs("Este es el archivo del programa fucncionesfor",archivo);
+fputs("Este es el archivo del programa funcionesfor",archivo);
 while (k==1){
 fprintf(archivo,"Teclea una opción \n");
 fprintf(archivo,"(1) para evaluar la variable en la función exp\n");
