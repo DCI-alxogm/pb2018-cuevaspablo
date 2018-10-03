@@ -234,7 +234,7 @@ vxiurano = vx0urano -(curano*((((G*Msol*x0urano))/(pow(rurano,3)))));
 vyiurano = vy0urano -(curano*((((G*Msol*y0urano))/(pow(rurano,3)))));
 vziurano = vz0urano -(curano*((((G*Msol*z0urano))/(pow(rurano,3)))));
 
-if (contador2%2000==0) {
+if (contador2%1000==0) {
 fprintf(urano,"%lf\t %lf\t %lf\t %lf\t %lf\t %lf\n",xiurano,yiurano,ziurano,vxiurano,vyiurano,vziurano);
 }
 x0urano=xiurano;
