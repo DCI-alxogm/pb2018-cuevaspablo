@@ -12,9 +12,11 @@ for (i=0;i<n;i++)
 {
 fscanf(numeros,"%lf \n",&array[i]);
 }
-
+for(i=0;i<n;i++) {
+if (
 
 
 
 return 0;
-}
+}printf("%lf \n",a;
+
