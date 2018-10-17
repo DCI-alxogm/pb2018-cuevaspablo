@@ -1,32 +1,40 @@
-//Este programa utiliza arreglos para encontrar el promedio y la desviación estándar de un grupo de datos//
+//Este programa calcula el promedio y desviación estándar de un grupo de datos//
 #include<stdio.h>
 #include<stdlib.h>
 #include<math.h>
-
 int main () 
 {
-FILE* promedio;
 
-int n=267,i;
-double numeros[n],sumatorio,a,b,c,sumatorio2,resultados[n];
-promedio=fopen("promedio.txt","r");
+int n,i;
+float *ptr,y,z,sumatorio=0.000000,sumatorio2=0.000000;
+FILE* datos;
+printf("Introduce el número de elementos:");
+scanf("%i",&n);
+ptr=(float*) calloc(n,sizeof(int));
+if(ptr==NULL) 
+{
+printf("¡Error! memoria no reservada,");
+exit(0);
+}
+datos=fopen("promedio.txt","r");
 for (i=0;i<n;i++){
-fscanf(promedio,"%lf\n",&numeros[i]);
+fscanf(datos,"%f\n",(ptr+i));
+sumatorio+=(*(ptr+i));
 }
-fclose(promedio);
+fclose(datos);
+y=(sumatorio)/n;
+
+datos=fopen("promedio.txt","r");
 for (i=0;i<n;i++){
-sumatorio+=numeros[i];
+fscanf(datos,"%f\n",(ptr+i));
+sumatorio2+=(pow(((*(ptr+i))-y),2));
 }
-a=sumatorio/n;
-for(i=0;i<n;i++){
-resultados[i]=numeros[i]-a;
-sumatorio2+=resultados[i];
-}
-c=sqrt(sumatorio2/n);
-
-printf("EL promedio de los datos es: %lf\n",a);
-printf("La desviación estándar de los datos es: %lf\n",c);
-
-
+fclose(datos);
+z=sqrt(sumatorio2/(n-1));
+printf("La media aritmética de los datos es:%f\n",y);
+printf("La desviación estándar de los datos es: %f\n",z);
+free(ptr);
 return 0;
 }
+
+
