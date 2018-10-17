@@ -7,7 +7,7 @@ argc=2;
 if(argc==2) {
 datos=argv[1];
 printf("El nombre del archivo a abrir es: %s \n",datos);
-data=fopen(datos,"w+");
+data=fopen(datos,"w");
 //En este apartado se pone todo lo que se haría con los datos del archivo//
 fclose(data);
 }
