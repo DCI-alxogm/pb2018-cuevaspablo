@@ -1,7 +1,8 @@
+//En este programa utilizo lo aprendido en el primer ejercicio para poder darle argumentos en la terminal al momento de ejecutar el programa//
 #include<stdio.h>
 #include<math.h>
-#include<stdlib.h>
-int main (int arg, char*argv[]) {
+#include<stdlib.h> //Arreglo dinámico de la memoria//
+int main (int arg, char*argv[]) {//En este apartado se declara el apuntador con arreglo//
 printf("El progama que estás ejecutando es: %s\n",argv[0]);
 char *trigo;
 FILE *valores;
