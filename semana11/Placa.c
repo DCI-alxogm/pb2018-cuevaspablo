@@ -19,26 +19,27 @@ resultados=argv[6];
 float T[n][n];
 float To[n][n];
 printf("El nombre del archivo con el que está trabajando es: %s \t  \n",argv[6]);
-results = fopen(resultados,"w");
-
+printf ("%f %f %f %f \n",T1,T2,T3,T4);
 for(i=0;i<n;i++) {
 for(j=0;j<n;j++){
 T[i][j]=0;
 To[i][j]=0;
 }
 }
+for(i=1;i<n;i++) {
+for(j=1;j<n;j++){
+T[0][0]=T1;
+T[i][0]=T2;
+T[0][j]=T3;
+T[i][j]=T4;
+}
+}
+printf("%f %f %f %f \n",T[0][0],T[i][0],T[0][j],T[i][j]);
 
-for(i=0;i<n;i++) {
-   for(j=0;j<n;j++){
-   T[0][0]=T1;
-    T[i+1][0]=T2;
-     T[0][j+1]=T3;
-      T[i+1][j+1]=T4;
-                 }
-                   } 
-printf("%f %f %f %f \n",T[0][0],T[i+1][0],T[0][j+1],T[i+1][j+1]);
+results = fopen(resultados,"w");
 
 fclose(results);
+
 }
 
 else if(arg<7) {
@@ -49,4 +50,5 @@ printf("Dio demasiados argumentos\n");
 }
 return 0;
 }
+
 
