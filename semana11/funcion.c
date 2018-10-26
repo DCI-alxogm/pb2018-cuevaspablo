@@ -4,20 +4,16 @@ float T1,T2,T3,T4;
 int i,j,n;
 float T[n][n];
 float To[n][n];
-for(i=0;i<n;i++) {
-for(j=0;j<n;j++){
-T[i][j]=0;
-To[i][j]=0;
-}
-}
+FILE *results;
+results = fopen("resultados.txt","w");
+for(i=1;i<n;i++) {
+for(j=1;j<n;j++){
 
-for(i=0;i<n;i++) {
-   for(j=0;j<n;j++){
-   T[0][0]=T1;
-    T[i+1][0]=T2;
-     T[0][j+1]=T3;
-      T[i+1][j+1]=T4;
-                 }
-                   } 
-printf("%f %f %f %f \n",T[0][0],T[i+1][0],T[0][j+1],T[i+1][j+1]);
+T[i][j]=(T[i+1][j]+T[i-1][j]+T[i][j+1]+T[i][j-1])/4;
+
+fprintf(results,"%f\t",T[i][j]);
+}
+fprintf(results,"\n");
+}
+fclose(results);
 }
