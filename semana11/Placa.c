@@ -5,7 +5,7 @@
 
 int main (int arg, char*argv[]) {
 printf("El progama que estás ejecutando es: %s\n",argv[0]);
-float T1,T2,T3,T4,epsilon;
+float T1,T2,T3,T4,epsilon1,epsilon2;
 char *resultados;
 FILE *results;
 int i,j,n;
@@ -15,7 +15,7 @@ T1=atof(argv[2]);
 T2=atof(argv[3]);
 T3=atof(argv[4]);
 T4=atof(argv[5]);
-epsilon=atof(argv[6]);
+epsilon1=atof(argv[6]);
 resultados=argv[7];
 n=n+2;
 float T[n][n];
@@ -36,23 +36,28 @@ for(j=1;j<n-1;j++){
 T[0][j]=T2;
 T[n-1][j]=T4;
 }
-printf("%f %f %f %f \n",T[i][0],T[0][j],T[n][j],T[i][n]);
-
-
+do {
 results = fopen(resultados,"w");
+
+
 for(j=1;j<n-1;j++){
 for(i=1;i<n-1;i++) {
 T[i][j]=(T[i+1][j]+T[i-1][j]+T[i][j+1]+T[i][j-1])/4;
-
 T[i][j]=(T[i][j]*1.5)+((1-1.5)*To[i][j]);
+
+epsilon2=0;
+if(sqrt(pow((((T[i][j]-To[i][j])/(To[i][j]))*100),2))>epsilon2){
+epsilon2=sqrt(pow((((T[i][j]-To[i][j])/(To[i][j]))*100),2));
+}
 To[i][j]=T[i][j];
 fprintf(results,"%f\t",T[i][j]);
 }
 fprintf(results,"\n");
 }
+
 fclose(results);
-
-
+}
+while(epsilon2>epsilon1);
 }
 
 else if(arg<8) {
@@ -63,5 +68,4 @@ printf("Dio demasiados argumentos\n");
 }
 return 0;
 }
-
 
