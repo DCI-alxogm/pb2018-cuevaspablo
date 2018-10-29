@@ -27,10 +27,11 @@ for(i=1;i<n-1;i++) {
 T[i][0]=T1;
 T[i][n-1]=T3;
 }
+fprintf(inicial,"%f %f \n",T[i][0],T[i][n-1]);
 for(j=1;j<n-1;j++){
 T[0][j]=T2;
 T[n-1][j]=T4;
 }
-fprintf(inicial,"%f %f",T2,T[0][j]);
+fprintf(inicial,"%f %f \n",T[0][j],T[n-1][j]);
 fclose(inicial);
  }

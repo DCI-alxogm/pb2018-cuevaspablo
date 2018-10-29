@@ -38,8 +38,6 @@ T[n-1][j]=T4;
 }
 do {
 results = fopen(resultados1,"w");
-
-
 for(j=1;j<n-1;j++){
 for(i=1;i<n-1;i++) {
 T[i][j]=(T[i+1][j]+T[i-1][j]+T[i][j+1]+T[i][j-1])/4;
