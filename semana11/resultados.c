@@ -5,14 +5,14 @@
 //Esta función opera los resultados que son necesitados en la función main.
 void resultados(float epsilon1) //En esta parte se le da como argumento a la función resultados el epsilon leído a partir de un archivo.
 {
-int z=0;
-float epsilon2,epsilon3;
+int z=0,epsilon3=0;
+float epsilon2;
 char prenom[20];
 FILE *results;
 FILE *inicial;
 FILE *data;
 int i,j,n;
-//Aquí se declaran todas las variables, así como los archivo//Realizado por José Pablo Cuevas Cázares el 29/10/18, primer intento de proyecto de segundo parcials, uno para leer n, otro para abrir el archivo inicial del cual se toman los valores de la matriz para las orillas y otro más llamado data, para imprimir los resultados del archivo.
+//Aquí se declaran todas las variables, así como los archivos que se necesitarán en el proyecto. Uno para leer n, otro para abrir el archivo inicial del cual se toman los valores de la matriz para las orillas y otro más llamado data, para imprimir los resultados del archivo.
 data=fopen("datos.txt","r");
 fscanf(data,"%i",&n);
 fclose(data);
@@ -50,23 +50,27 @@ To[i][j]=T[i][j];
 }
 //En este for se realizan todas las operaciones de la temperatura, tomando los valores que fueron escaneados en el archivo inicial.
 sprintf(prenom,"%iresultados.txt",z);
-results = fopen(prenom,"w");
-if(epsilon1>epsilon1 && z%45==0){
-for(j=1;j<n-1;j++){
-for(i=1;i<n-1;i++) {
-fprintf(results,"%f\t",T[i][j]);
-}
-fprintf(results,"\n");
-}
-}
+	if(epsilon2>epsilon1 && z%10==0){
+	results=fopen(prenom,"w");
+	}
+	else{
+	results=fopen("balance.txt","w");
+	}
+
+	for(j=n-2;j>0;j--){
+		for(i=1;i<n-1;i++){
+			fprintf(results,"%f\t",T[i][j]);
+		}
+		fprintf(results,"\n");
+	}
 fclose(results);
-z=z+1;
+z=z+1; 
+}
+//En esta sección es cuando se imprimen los resultados en muchos archivos.
+while(epsilon2>epsilon1 && epsilon3<3100);
+//Lo que está dentro del while se realizará hasta que el epsilon nuevo sea mayor que el que fue dado por el usuario.
 }
 
-//En esta sección es cuando se imprimen los resultados en muchos archivos.
-while(epsilon2>epsilon1 && z<70);
-printf("%f\n",z);//Lo que está dentro del while se realizará hasta que el epsilon nuevo sea mayor que el que fue dado por el usuario.
-}
 
 
 
