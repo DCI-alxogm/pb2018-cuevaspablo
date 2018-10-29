@@ -6,7 +6,7 @@
 int main (int arg, char*argv[]) {
 printf("El progama que estás ejecutando es: %s\n",argv[0]);
 float T1,T2,T3,T4,epsilon1,epsilon2;
-char *resultados;
+char *resultados1;
 FILE *results;
 int i,j,n;
 if (arg==8){
@@ -16,7 +16,7 @@ T2=atof(argv[3]);
 T3=atof(argv[4]);
 T4=atof(argv[5]);
 epsilon1=atof(argv[6]);
-resultados=argv[7];
+resultados1=argv[7];
 n=n+2;
 float T[n][n];
 float To[n][n];
@@ -37,7 +37,7 @@ T[0][j]=T2;
 T[n-1][j]=T4;
 }
 do {
-results = fopen(resultados,"w");
+results = fopen(resultados1,"w");
 
 
 for(j=1;j<n-1;j++){

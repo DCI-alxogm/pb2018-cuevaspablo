@@ -13,6 +13,7 @@ fscanf(data,"%f",&T3);
 fscanf(data,"%f",&T4);
 fscanf(data,"%f",&epsilon1);
 fclose(data);
+n=n+2;
 float T[n][n];
 float To[n][n];
 inicial=fopen ("inicial.txt","w");
@@ -30,6 +31,6 @@ for(j=1;j<n-1;j++){
 T[0][j]=T2;
 T[n-1][j]=T4;
 }
-
+fprintf(inicial,"%f %f",T2,T[0][j]);
 fclose(inicial);
  }
