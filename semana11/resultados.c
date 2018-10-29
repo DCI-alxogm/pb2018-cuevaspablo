@@ -50,7 +50,7 @@ To[i][j]=T[i][j];
 }
 //En este for se realizan todas las operaciones de la temperatura, tomando los valores que fueron escaneados en el archivo inicial.
 sprintf(prenom,"%iresultados.txt",z);
-	if(epsilon2>epsilon1 && z%10==0){
+	if(epsilon2>epsilon1 && z%5==0){
 	results=fopen(prenom,"w");
 	}
 	else{
