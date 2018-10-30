@@ -33,7 +33,7 @@ fscanf(inicial,"%f \n",&T[i][j]);
 fclose(inicial);
 //En este for se escanean todos los datos impresos en el archivo, acción que se realizó en la función main.
 do {
-for(j=1;j<n-1;j++){
+for(j=1;j<n-1;j++){https://github.com/DCIPB2018/pb2018-cuevaspablo.git
 for(i=1;i<n-1;i++) {
 T[i][j]=(T[i+1][j]+T[i-1][j]+T[i][j+1]+T[i][j-1])/4;
 //Se calcula el promedio de un punto en la placa.
@@ -57,7 +57,7 @@ sprintf(prenom,"%iresultados.txt",z);
 	results=fopen("balance.txt","w");
 	}
 
-	for(j=n-2;j>0;j--){
+	for(j=1;j<n-1;j++){
 		for(i=1;i<n-1;i++){
 			fprintf(results,"%f\t",T[i][j]);
 		}

@@ -9,7 +9,7 @@ float T1,T2,T3,T4,epsilon1;
 FILE *data;
 FILE *inicial;
 int i,j,n;
-//Aquí se declaran todas las variable y se abren dos archivos, uno de donde se leen los datos y uno donde se guardan.     
+//Aquí se declaran todas las variable y se abren dos archivos, uno de donde se leen los datos y uno donde se guardan.     https://github.com/DCIPB2018/pb2018-cuevaspablo.git
 data=fopen("datos.txt","r");
 fscanf(data,"%i",&n);
 fscanf(data,"%f",&T1);
