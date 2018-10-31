@@ -128,4 +128,3 @@ while(epsilon2>epsilon1 && epsilon3<3100);
 
 
 
-
